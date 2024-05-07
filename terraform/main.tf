@@ -2,8 +2,8 @@ locals {
     local1 = "local1"
 }
 
-output {
-    loca = locals.local1
+output "loca" {
+    value = locals.local1
 }
 
 # An example resource that does nothing.
