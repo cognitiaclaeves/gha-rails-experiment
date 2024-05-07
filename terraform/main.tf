@@ -3,7 +3,7 @@ locals {
 }
 
 output "loca" {
-    value = local.local1
+  value = local.local1
 }
 
 # An example resource that does nothing.
