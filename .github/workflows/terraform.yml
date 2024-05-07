@@ -128,6 +128,7 @@ jobs:
       with:
         scan-type: 'config'
         scan-ref: './terraform/tfplan'
+        scanners: 'Misconfiguration,Secret'
         # ignore-unfixed: true
         # format: 'sarif'
         format: 'table'
