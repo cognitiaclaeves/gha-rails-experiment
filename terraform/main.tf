@@ -24,6 +24,26 @@ terraform {
   }
 }
 
+var "aws_region" {
+    type = string
+    default = "us-east-1"
+}
+
+var "owner" {
+    type = string
+    default = "jnorment"
+}
+
+provider "aws" {
+  region = var.aws_region
+
+  default_tags {
+    tags = {
+      owner = var.owner
+    }
+  }
+}
+
 #     terraform {
 #       backend "remote" {
 #         # The name of your Terraform Cloud organization.

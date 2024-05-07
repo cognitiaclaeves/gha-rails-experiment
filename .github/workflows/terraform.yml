@@ -97,26 +97,7 @@ jobs:
         aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
         aws-region: us-east-1
 
-    # - name: Configure AWS Credentials 1
-    #   id: creds
-    #   uses: aws-actions/configure-aws-credentials@v4
-    #   with:
-    #     aws-region: us-east-2
-    #     role-to-assume: arn:aws:iam::123456789100:role/my-github-actions-role
-    #     output-credentials: true
-    # - name: get caller identity 1
-    #   run: |
-    #     aws sts get-caller-identity
-    # - name: Configure AWS Credentials 2
-    #   uses: aws-actions/configure-aws-credentials@v4
-    #   with:
-    #     aws-region: us-east-2
-    #     aws-access-key-id: ${{ steps.creds.outputs.aws-access-key-id }}
-    #     aws-secret-access-key: ${{ steps.creds.outputs.aws-secret-access-key }}
-    #     aws-session-token: ${{ steps.creds.outputs.aws-session-token }}
-    #     role-to-assume: arn:aws:iam::123456789100:role/my-other-github-actions-role
-
-    - name: get caller identity2
+    - name: get caller identity
       run: |
         aws sts get-caller-identity
 
