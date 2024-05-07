@@ -1,16 +1,16 @@
 locals {
-    local1 = "local1"
+  local1 = "local1"
 }
 
 output "loca" {
-    value = locals.local1
+  value = locals.local1
 }
 
 # An example resource that does nothing.
 resource "null_resource" "example" {
-    triggers = {
+  triggers = {
     value = "A example resource that does nothing!"
-    }
+  }
 }
 
 terraform {
@@ -20,18 +20,18 @@ terraform {
     region = "us-east-1"
 
     # dynamodb_table = "rearc-data-terraform-state-locks"
-    encrypt        = true
+    encrypt = true
   }
 }
 
 variable "aws_region" {
-    type = string
-    default = "us-east-1"
+  type    = string
+  default = "us-east-1"
 }
 
 variable "owner" {
-    type = string
-    default = "jnorment"
+  type    = string
+  default = "jnorment"
 }
 
 provider "aws" {
