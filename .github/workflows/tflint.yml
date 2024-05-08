@@ -42,4 +42,5 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
 
     - name: Run TFLint
-      run: tflint -f # compact
+      run: TFLINT_LOG=debug tflint
+      # run: tflint -f # compact
