@@ -123,7 +123,7 @@ jobs:
     - name: Terraform Plan
       run: terraform plan -input=false --out tfplan
 
-    - name: Run Trivy vulnerability scanner in repo mode
+    - name: Run Trivy vulnerability scanner for Terraform
       uses: aquasecurity/trivy-action@master
       env:
         TRIVY_DEBUG: true
